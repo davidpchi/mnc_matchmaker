@@ -3,15 +3,19 @@ const dataMap = new Map();
 const playerSelect = document.getElementById("known_players");
 
 // TODO: Figure this out
-// fetch('https://toxic-api-production.gggrunt16.workers.dev/placement')
-//     .then(res => res.json())
-//     .then(out => {
-//         processJSON(out);
+// https://cors-anywhere.herokuapp.com/corsdemo
+// const xhttp = new XMLHttpRequest();
+// xhttp.onreadystatechange = function() {
+//     if (this.readyState === 4 && this.status ===200) {
+//         console.log(this.responseText);
+//         processJSON(this.responseText);
 //     }
-// ).catch(error => alert(error));
+// }
+// xhttp.open("GET", "https://cors-anywhere.herokuapp.com/https://toxic-api-production.gggrunt16.workers.dev/placement", true);
+// xhttp.send();
 
 // Local Testing Data
-const rawData = `{"mmr":{"tryhard0331":1397.4885409182448,"rccsr":1495.4047954154519,"coconuthead321":1538.8375481226765,"barneydabarnacle":1353.9171637173085,"ragtime":1626.4762802957453,"sarin":1522.205726301398,"pentakilldan":1625.3488420846581,"dusk euphoria":1635.0257058627406,"doomgeek":1519.2399129487894,"kash4null":1567.3272099015242,"bloodysundae":1472.4049884250226,"crickettlo14":1534.9971717512176,"3hawkz":1759.8167604591738,"zqmdfg":1522.5623519984017,"humantaboo":1392.0614485200497,"datonedude23":1547.495856282352,"namelrrelevant":1542.6527934294575,"lastspartan017":1530.9775109818986,"haley":1479.4077925619383,"drboomer":1366.0736352957915,"pmybqholto":1526.856274797828,"lumenadi":1426.997048023692,"dropitlikeitsbox":1489.7637417717701,"thecanadianmoose":1671.2906446838806,"xylobi":1470.454474077244,"downbad minor":1649.5130585216455,"pioushippo":1534.4219454546787,"yahboiduane":1626.7100568172864,"kurushimi4":1469.6756643104202,"tootoxin":1841.5936134137114,"sharpkaze":1581.3756702575458,"ducorey":1423.9096312357592,"dwyane":1515.01899974558,"iron":1623.5783327677375,"sexualpancake":1636.4610737661055,"cmoneyseemoney":1512.6706971864267,"drsmashphd":1526.6167022239283,"hector1747":1456.212646470949,"relia wylder":1530.1845776564967}}`;
+const rawData = `{"mmr":{"tryhard0331":1397.4885409182448,"rccsr":1495.4047954154519,"coconuthead321":1538.8375481226765,"barneydabarnacle":1353.9171637173085,"ragtime":1626.4762802957453,"sarin":1522.205726301398,"pentakilldan":1625.3488420846581,"dusk euphoria":1635.0257058627406,"doomgeek":1495.4487751418335,"kash4null":1530.2746678772487,"crickettlo14":1534.9971717512176,"3hawkz":1759.8167604591738,"zqmdfg":1580.8673374090831,"bloodysundaé":1503.4456322544193,"ir0n":1633.5818851551594,"humantaboo":1392.0614485200497,"datonedude23":1565.763443676294,"namelrrelevant":1542.6527934294575,"lastspartan017":1530.9775109818986,"haley":1478.7808919498336,"drboomer":1366.0736352957915,"pmybqholto":1526.856274797828,"lumenadi":1465.39943966401,"dropitlikeitsbox":1508.7749341915319,"zenmasterthrow":1240.3381276527705,"thecanadianmoose":1611.3140285472452,"xylobi":1469.5256473937754,"downbad minor":1607.1172550311499,"pioushippo":1542.5914474171855,"yahboiduane":1617.6599628789277,"kurushimi4":1469.6756643104202,"sharpkaze":1537.4469523007726,"t00t0x1n":1701.6785263746694,"ducorey":1423.9096312357592,"dwyane":1515.01899974558,"sexualpancake":1631.2196787915884,"cmoneyseemoney":1512.6706971864267,"drsmashphd":1526.6167022239283,"hector1747":1481.9147653584098,"relia wylder":1555.9229622932712}}`;
 processJSON(rawData);
 
 function processJSON(data) {
